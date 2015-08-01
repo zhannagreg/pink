@@ -1,0 +1,10 @@
+@import "bower_components/sass-rem/_rem.scss";
+
+html {
+  @include rem-baseline;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}

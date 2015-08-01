@@ -1,0 +1,59 @@
+.heading {
+  font-family: $font-femily;
+  @include rem(line-height, 120%);
+
+  &--h1 {
+    @include rem(font-size, $font-size--h1);
+    font-weight: $heading-weight--h1;
+    color: $heading-color--h1;
+    @include rem(line-height, 120%);
+  }
+  &--h2 {
+    @include rem(font-size, $font-size--h2);
+    font-weight: $heading-weight--h2;
+    color: $heading-color--h2;
+  }
+  &--h3 {
+    @include rem(font-size, $font-size--h3);
+    font-weight: $heading-weight--h3;
+    color: $heading-color--h3;
+  }
+  &--h4 {
+    @include rem(font-size, $font-size--h4);
+    font-weight: $heading-weight--h4;
+    color: $heading-color--h4;
+  }
+}
+
+@media (min-width: $sm-width) {
+
+  .heading {
+    &--h1 {
+      @include rem(font-size, $font-size--h1-sm);
+    }
+    &--h2 {
+      @include rem(font-size, $font-size--h2-sm);
+    }
+
+  }
+
+}
+
+@media (min-width: $md-width) {
+
+  .heading {
+    &--h1 {
+      @include rem(font-size, $font-size--h1-md);
+    }
+    &--h2 {
+      @include rem(font-size, $font-size--h2-md);
+    }
+    &--h3 {
+      @include rem(font-size, $font-size--h3-md);
+      @include rem(line-height, $line-height--h3-md);
+
+    }
+
+  }
+
+}

@@ -1,0 +1,199 @@
+.features {
+  position: relative;
+  padding-top: 85px;
+  background-color: $grey;
+
+  &__item {
+
+    &--third {
+      padding-bottom: 325px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 157px;
+        height: 320px;
+        background: $grey url(../images/features/iphone-xs@x1.png)  center bottom/157px 283px no-repeat;
+
+        @media (min-resolution: 1.5dppx) {
+          background-image: url(../images/features/iphone-xs@x2.png);
+        }
+
+        @media (min-resolution: 3dppx) {
+          background-image: url(../images/features/iphone-xs@x3.png);
+        }
+      }
+    }
+
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-size: cover;
+    border-top: 35px solid #fff;
+    border-right: 99vw solid transparent;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+}
+
+
+
+@media (min-width: $sm-width) {
+
+  .features {
+
+    &__item {
+      background-color: $grey;
+
+      &--third {
+        padding-bottom: 0;
+
+        &::after {
+          z-index: 10;
+          position: absolute;
+          left: 40px/$sm-width*100%;
+          right: 0;
+          bottom: 0;
+          margin-left: 0;
+          margin-right: 0;
+          width: 268px;
+          height: 485px;
+          background: url(../images/features/iphone-sm@x1.png) left bottom/268px 485px no-repeat;
+
+          @media (min-resolution: 1.5dppx) {
+            background-image: url(../images/features/iphone-sm@x2.png);
+          }
+          @media (min-resolution: 3dppx) {
+            background-image: url(../images/features/iphone-sm@x3.png);
+          }
+        }
+      }
+
+    }
+
+    &__list {
+      width: 355px/$sm-width*100%;
+      float: right;
+      text-align: left;
+    }
+  }
+
+}
+
+@media (min-width: $md-width) {
+
+  .features {
+
+    &__list {
+      width: 100%;
+      font-size: 0;
+      text-align: center;
+    }
+    &__item {
+      position: relative;
+      @include rem(font-size, 18px);
+      @include rem(line-height, 30px);
+      display: inline-block;
+      vertical-align: top;
+      width: 1/3*100%;
+      padding-top: 265px;
+      &:hover::after {
+        box-shadow: inset 0 0 0 8px #252527;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 10;
+        top: -95px;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+        width: 266px;
+        height: 300px;
+        background: url(../images/features/iphone-case-md@x1.png) left top/266px 300px no-repeat;
+
+        @media (min-resolution: 1.5dppx) {
+          background: url(../images/features/iphone-case-md@x2.png) left top/266px 300px no-repeat;
+        }
+        @media (min-resolution: 3dppx) {
+          background: url(../images/features/iphone-case-md@x3.png) left top/266px 300px no-repeat;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 11;
+        top: -52px;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+        width: 165px;
+        height: 257px;
+      }
+
+      &--first {
+        &::after {
+          background: url(../images/features/iphone1-md@x1.jpg) left top/165px 257px no-repeat;
+
+          @media (min-resolution: 1.5dppx) {
+            background: url(../images/features/iphone1-md@x2.jpg) left top/165px 257px no-repeat;
+          }
+          @media (min-resolution: 3dppx) {
+            background: url(../images/features/iphone1-md@x3.jpg) left top/165px 257px no-repeat;
+          }
+        }
+      }
+
+
+      &--second {
+        &::after {
+          background: url(../images/features/iphone2-md@x1.jpg) left top/165px 257px no-repeat;
+
+          @media (min-resolution: 1.5dppx) {
+            background: url(../images/features/iphone2-md@x2.jpg) left top/165px 257px no-repeat;
+          }
+          @media (min-resolution: 3dppx) {
+            background: url(../images/features/iphone2-md@x3.jpg) left top/165px 257px no-repeat;
+          }
+        }
+      }
+
+
+      &--third {
+        &::after {
+          background: url(../images/features/iphone3-md@x1.jpg) left top/165px 257px no-repeat;
+
+          @media (min-resolution: 1.5dppx) {
+            background: url(../images/features/iphone3-md@x2.jpg) left top/165px 257px no-repeat;
+          }
+          @media (min-resolution: 3dppx) {
+            background: url(../images/features/iphone3-md@x3.jpg) left top/165px 257px no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+}

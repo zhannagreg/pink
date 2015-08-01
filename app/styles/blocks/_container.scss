@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+  width: 280px/$xs-width*100%;
+
+  @media (min-width: $sm-width) {
+    width: 620px/$sm-width*100%;
+  }
+  @media (min-width: $md-width) {
+    width: 940px/$md-width*100%;
+  }
+  @media (min-width: $lg-width) {
+    width: 940px/$lg-width*100%;
+  }
+
+}

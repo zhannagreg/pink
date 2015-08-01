@@ -1,0 +1,9 @@
+.page {
+  position: relative;
+  height: 100%;
+  @include rem(font-size, $font-size);
+  font-family: $font-femily;
+  @include rem(line-height, $line-height);
+  text-align: center;
+  color: #283645;
+}

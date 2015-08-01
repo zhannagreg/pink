@@ -1,0 +1,94 @@
+.clock {
+  display: none;
+  padding-top: 70px;
+  padding-bottom: 60px;
+
+  &__24 {
+    position: relative;
+    width: 192px;
+    height: 192px;
+    float: left;
+    margin-left: 24px/$sm-width*100%;
+    margin-top: 58px;
+    border: 12px solid $red;
+    border-radius: 50%;
+    @include rem(font-size, 104px);
+    @include rem(line-height, 162px);
+    font-weight: 700;
+    color: $red;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -46px;
+      top: -87px;
+      width: 260px;
+      height: 301px;
+      background: url(../images/clock/timer-2.svg)  no-repeat;
+    }
+  }
+
+
+  &__desc {
+    float: right;
+    width: 310px/$sm-width*100%;
+    text-align: left;
+  }
+
+  &__heading {
+    @include rem(font-size, 30px);
+    @include rem(line-height, 36px);
+    font-weight: 700;
+    color: $black;
+  }
+
+  &__link {
+    color: $red;
+  }
+
+}
+
+@media (min-width: $sm-width) {
+
+  .clock {
+    display: block;
+  }
+
+}
+
+@media (min-width: $md-width) {
+
+  .clock {
+    background-color: $grey;
+
+    &__text {
+      @include rem(font-size, 18px);
+      @include rem(line-height, 33px);
+    }
+
+    &__link {
+      @include rem(font-size, 18px);
+      @include rem(line-height, 33px);
+    }
+
+    &__desc {
+      width: 650px/$md-width*100%;
+    }
+
+    &__24 {
+      width: 220px;
+      height: 220px;
+      @include rem(font-size, 120px);
+      @include rem(line-height, 186px);
+
+      &::before {
+        background-image: url(../images/clock/timer-3.svg);
+        width: 298px;
+        height: 345px;
+        left: -51px;
+        top: -99px;
+      }
+    }
+  }
+
+}

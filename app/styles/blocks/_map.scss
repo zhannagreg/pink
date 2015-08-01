@@ -1,0 +1,22 @@
+.map {
+  position: relative;
+
+  &__google {
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+  }
+
+  &::before {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: (25px/200px*100vh) 50vw 0 50vw;
+    border-color: #fff transparent transparent transparent;
+  }
+}

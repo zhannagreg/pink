@@ -1,0 +1,85 @@
+.download-app {
+  padding-top: 30px;
+  padding-bottom: 33px;
+  background-color: #1d2631;
+
+  &__btn {
+    display: block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: $white;
+    @include rem(font-size, 18px);
+    @include rem(line-height, 49px);
+    font-weight: 700;
+    border: 3px solid $white;
+    border-radius: 25px;
+    height: 55px;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      background-color: $white;
+      color: $red;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 35px/$xs-width*100%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__text {
+    color: $white;
+    @include rem(font-size, 14px);
+    @include rem(line-height, 24px);
+  }
+}
+
+@media (min-width: $sm-width) {
+
+  .download-app {
+    float: left;
+    width: 300px;
+    background-color: transparent;
+    margin-top: 200px;
+    margin-left: -290px;
+
+    .container {
+      margin: 0;
+      padding: 0;
+    }
+
+    &__text {
+      @include rem(font-size, 18px);
+    }
+  }
+
+}
+
+
+@media (min-width: $md-width) {
+
+  .download-app {
+    margin-top: 250px;
+    margin-left: -350px;
+
+    &__btn {
+      @include rem(font-size, 21px);
+    }
+  }
+
+}

@@ -1,0 +1,180 @@
+.header {
+
+  &__container {
+    width: 100%;
+    background-color: #1d2631;
+  }
+
+  &__full-height {
+    height: 100vh;
+    background-image: url(../images/header/iphone-hand-1.png), url(../images/header/background-1@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: 258px 286px, cover;
+    background-position: bottom left, center;
+    background-attachment: scroll, fixed;
+    background-color: #1d2631;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url(../images/header/iphone-hand-1@2x.png), url(../images/header/background-1@2x.jpg);
+    }
+
+    @media (min-resolution: 3dppx) {
+      background-image: url(../images/header/iphone-hand-1@3x.png), url(../images/header/background-1@3x.jpg);
+    }
+  }
+
+
+  &__wrap {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, .3);
+    &--toggle-color {
+      background-color: #283645;
+    }
+  }
+
+  &__logo {
+    float: left;
+    position: relative;
+
+    @media (min-width: $sm-width) {
+      width: 215px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -13px;
+        left: 0;
+        width: 60px;
+        height: 40px;
+        background: url(../images/header/glasses-simple@1x.png) no-repeat;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__hamburger {
+    background-color: transparent;
+    float: right;
+    border: 0;
+
+    &:hover {
+      .line {fill: $red;}
+    }
+    &:active {
+      opacity: 0.3;
+    }
+
+    .line {
+      fill: $white;
+    }
+  }
+
+  &__cross {
+    float: right;
+    background-color: transparent;
+    border: 0;
+
+    &:hover {
+      .cross {fill: $red;}
+    }
+    &:active {
+      opacity: 0.3;
+    }
+
+    .cross {
+      fill: $white;
+    }
+  }
+}
+
+@media (min-width: $sm-width) {
+
+  .header {
+    height: 100vh;
+    background-image: url(../images/header/iphone-hand-2@1x.png), url(../images/header/background-2@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: 700px 545px, cover;
+    background-position: bottom center, center;
+    background-attachment: scroll, fixed;
+    background-color: #1d2631;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url(../images/header/iphone-hand-2@2x.png), url(../images/header/background-2@2x.jpg);
+    }
+
+    &__logo {
+      &:hover::before {
+        background-image: url(../images/header/red-glasses-sm@1x.png);
+      }
+    }
+
+
+
+    &__full-height {
+      height: auto;
+      background: transparent;
+    }
+
+    &__heading {
+      float: left;
+      width: 240px;
+      margin-left: 60px/$sm-width*100%;
+    }
+  }
+
+}
+
+
+@media (min-width: $md-width) {
+
+  .header {
+    height: 100vh;
+    background-image: url(../images/header/iphone-hand-3@1x.png), url(../images/header/background-fullsize.jpg);
+    background-repeat: no-repeat;
+    background-size: 1050px 645px, cover;
+    background-position: bottom center, center;
+    background-attachment: scroll, fixed;
+    background-color: #1d2631;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url(../images/header/iphone-hand-3@2x.png),  url(../images/header/background-fullsize.jpg);;
+    }
+
+    &__wrap {
+      padding-top: 55px;
+      padding-bottom: 55px;
+    }
+
+    &__hamburger {
+      display: none;
+    }
+
+    &__cross {
+      display: none;
+    }
+
+
+    &__heading {
+      float: left;
+      width: 240px;
+    }
+
+    &__logo {
+      &::before {
+        background-image: url(../images/header/glasses-md@1x.png);
+
+        @media (min-resolution: 1.5dppx) {
+          background-image: url(../images/header/glasses-md@2x.png);
+        }
+        @media (min-resolution: 3dppx) {
+          background-image: url(../images/header/glasses-md@3x.png);
+        }
+      }
+    }
+  }
+
+}

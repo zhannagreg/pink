@@ -1,0 +1,12 @@
+.promo {
+  padding-top: 45px;
+  padding-bottom: 40px;
+
+  &__heading {
+    margin-bottom: 0;
+    margin-top: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
